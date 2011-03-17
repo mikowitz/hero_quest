@@ -7,3 +7,9 @@ rescue Exception
   puts "~$ [sudo] gem install gosu"
   exit
 end
+
+$:.unshift File.dirname(__FILE__)
+
+require 'lib/gameboard'
+
+Gameboard.new.show
